@@ -66,6 +66,16 @@ form button {
     margin: 5px;
 }
 
+form button {
+    background-color: #000fff;
+    color: #ffff;
+    font-size: 20px;
+}
+
+form button:hover {
+    background-color: blueviolet;
+}
+
 .delete-btn {
     background-color: red;
     color: white;
