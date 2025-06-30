@@ -1,0 +1,184 @@
+.img.kenburns {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.img.kenburns::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/slider2-bg.jpg');
+    /* ✅ Adjust this path if needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: kenburnsZoom 25s ease-in-out infinite;
+    z-index: -1;
+    transform-origin: center;
+    filter: brightness(0.95);
+    /* ✅ Less dark */
+    opacity: 1;
+    /* ✅ Fully visible */
+}
+
+@keyframes kenburnsZoom {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.08) translate(2%, 2%);
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+.glass-overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.overlay-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.overlay-text p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.about-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Mission & Vision */
+.mission-section,
+.vision-section {
+    padding: 3rem 2rem;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.mission-section h2,
+.vision-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.mission-section p,
+.vision-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    height: auto;
+}
+
+.team-member h3 {
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1.1rem;
+}
+
+.team-member p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    .img.kenburns {
+        height: 70vh;
+        /* adjust to your liking */
+    }
+
+    .img.kenburns::before {
+        background-size: cover;
+    }
+}

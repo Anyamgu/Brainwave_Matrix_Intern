@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/roman.jpg" type="image/jpg">
+    <title>TimelyLux - Shop</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css" />
+
+    <!-- Boxiconss -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="bx bx-time"></i>
+            <span>TimelyLux</span>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="new-arrivals.html">New Arrivals</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class="bx bx-search" id="search-icon"></i>
+            <div id="cart-icon">
+                <i class="bx bx-shopping-bag"></i>
+                <span class="cart-item-count"></span>
+            </div>
+            <i class="bx bx-menu" id="menu-icon"></i>
+        </div>
+    </header>
+
+    <!-- Cart -->
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="images/daytona.jpg" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Rolex Daytona</h2>
+                    <span class="cart-price">$12000</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class='bx bx-trash cart-remove'></i>
+            </div> -->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <i class='bx bx-x' id="cart-close"></i>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-bar" id="search-bar">
+        <input type="text" id="search-input" placeholder="Search for watches...">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <!-- IMAGE -->
+    <section class="shop-img-kenburns">
+        <div class="kenburns-overlay">
+            <div class="kenburns-text">
+                <h2>Our Shop</h2>
+                <p>Find Your Perfect Timepiece</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Filter + Sort Section -->
+    <section class="filters">
+        <div class="container">
+            <select id="filter-category">
+                <option value="all">All Categories</option>
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+                <option value="kids">Kids</option>
+            </select>
+
+            <select id="sort-price">
+                <option value="default">Sort by</option>
+                <option value="asc">Price: Low to High</option>
+                <option value="desc">Price: High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Shop Products -->
+    <section class="shop">
+        <h1 class="section-title">Shop Watches</h1>
+        <div class="product-content">
+            <div class="product-box" data-category="men" data-name="Omega Speedmaster" data-price="4900">
+                <div class="img-box">
+                    <img src="images/omega.jpg">
+                </div>
+                <h2 class="product-title">Omega Speedmaster</h2>
+                <div class="price-and-cart">
+                    <span class="price">$4900</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="men" data-name="Rolex Submariner" data-price="10000">
+                <div class="img-box">
+                    <img src="images/Submariner.jpeg">
+                </div>
+                <h2 class="product-title">Rolex Submariner</h2>
+                <div class="price-and-cart">
+                    <span class="price">$10000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="women" data-name="Fossil" data-price="5000">
+                <div class="img-box">
+                    <img src="images/fossil.jpg">
+                </div>
+                <h2 class="product-title">Fossil</h2>
+                <div class="price-and-cart">
+                    <span class="price">$5000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="kids" data-name=Timex Kids"" data-price="8900">
+                <div class="img-box">
+                    <img src="images/P13.jpg">
+                </div>
+                <h2 class="product-title">Timex Kids</h2>
+                <div class="price-and-cart">
+                    <span class="price">$8900</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="women" data-name="Explorer" data-price="15000">
+                <div class="img-box">
+                    <img src="images/Explorer.png">
+                </div>
+                <h2 class="product-title">Explorer</h2>
+                <div class="price-and-cart">
+                    <span class="price">$15000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="men" data-name="Tissot" data-price="2000">
+                <div class="img-box">
+                    <img src="images/tissot.jpg">
+                </div>
+                <h2 class="product-title">Tissot</h2>
+                <div class="price-and-cart">
+                    <span class="price">$2000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+
+
+            <div class="product-box" data-category="women" data-name="Lady-Datejust " data-price="5000">
+                <div class="img-box">
+                    <img src="images/lady-datejust.jpg">
+                </div>
+                <h2 class="product-title">Lady Datejust</h2>
+                <div class="price-and-cart">
+                    <span class="price">$5000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+
+            <div class="product-box" data-category="kids" data-name="Omega" data-price="900">
+                <div class="img-box">
+                    <img src="images/speed.jpg">
+                </div>
+                <h2 class="product-title">Omega Apollo 8</h2>
+                <div class="price-and-cart">
+                    <span class="price">$900</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+
+            <div class="product-box" data-category="women" data-name="Royal-Oak" data-price="7500">
+                <div class="img-box">
+                    <img src="images/rose.jpg">
+                </div>
+                <h2 class="product-title">Royal Oak Perpetual</h2>
+                <div class="price-and-cart">
+                    <span class="price">$7500</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="men" data-name="Numeral" data-price="2500">
+                <div class="img-box">
+                    <img src="images/numeral.jpg">
+                </div>
+                <h2 class="product-title">Numeral</h2>
+                <div class="price-and-cart">
+                    <span class="price">$2500</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="men" data-name="Royal" data-price="1500">
+                <div class="img-box">
+                    <img src="images/home.png">
+                </div>
+                <h2 class="product-title">Royal</h2>
+                <div class="price-and-cart">
+                    <span class="price">$1500</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="women" data-name="Yacht" data-price="11500">
+                <div class="img-box">
+                    <img src="images/Yacht Master.png">
+                </div>
+                <h2 class="product-title">Yacht Master</h2>
+                <div class="price-and-cart">
+                    <span class="price">$11500</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+
+
+            <div class="product-box" data-category="kids" data-name="Black Strap" data-price="1000">
+                <div class="img-box">
+                    <img src="images/shop.jpg">
+                </div>
+                <h2 class="product-title">Black Strap</h2>
+                <div class="price-and-cart">
+                    <span class="price">$1000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="kids" data-name="Smart Watch" data-price="850">
+                <div class="img-box">
+                    <img src="images/smart.jpg">
+                </div>
+                <h2 class="product-title">Smart Watch</h2>
+                <div class="price-and-cart">
+                    <span class="price">$850</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+            <div class="product-box" data-category="kids" data-name="Cellone" data-price="6680">
+                <div class="img-box">
+                    <img src="images/collex.jpg">
+                </div>
+                <h2 class="product-title">Cellone</h2>
+                <div class="price-and-cart">
+                    <span class="price">$6680</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class='bx bx-time'></i>
+                <span>TimelyLux</span>
+                <p>Timeless elegance for every wrist.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: support@timelylux.com</p>
+                <p>Phone: +1 555-987-6543</p>
+                <p>123 Prestige Avenue, NY, USA</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TimelyLux. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class='bx bx-chevron-up'></i>
+    </a>
+
+
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+    <script src="js/shop.js"></script>
+
+
+
+
+</body>
+
+</html>

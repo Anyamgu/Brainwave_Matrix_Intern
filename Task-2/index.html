@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/roman.jpg" type="image/jpg">
+    <title>TimelyLux</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <div class="logo">
+            <i class="bx bx-time"></i>
+            <span>TimelyLux</span>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="new-arrivals.html">New Arrivals</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="bx bx-search" id="search-icon"></i>
+            <div id="cart-icon">
+                <i class="bx bx-shopping-bag"></i>
+                <span class="cart-item-count"></span>
+            </div>
+            <i class="bx bx-menu" id="menu-icon"></i>
+        </div>
+    </header>
+
+    <!-- Cart -->
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="images/daytona.jpg" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Rolex Daytona</h2>
+                    <span class="cart-price">$12000</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class='bx bx-trash cart-remove'></i>
+            </div> -->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <i class='bx bx-x' id="cart-close"></i>
+    </div>
+
+
+    <!-- SEARCH -->
+    <div class="search-bar" id="search-bar">
+        <input type="text" id="search-input" placeholder="Search for watches...">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elegance in Every Tick</h1>
+            <p>Discover timeless designs crafted for men, women, and kids. Shop the finest watches thatdefine style.</p>
+            <span class="badge">New Collection</span>
+            <a href="shop.html" class="btn">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <div class="hero-image">
+            <img src="images/b1.jpg" alt="Luxury Watch">
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="shop">
+        <h1 class="section-title">Featured Products</h1>
+        <div class="product-content">
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/daytona.jpg" alt="Rolex Daytona">
+                </div>
+                <h2 class="product-title">Rolex Daytona</h2>
+                <div class="price-and-cart">
+                    <span class="price">$12000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/roger.jpg" alt="Roger">
+                </div>
+                <h2 class="product-title">Roger</h2>
+                <div class="price-and-cart">
+                    <span class="price">$5600</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/oak.jpg" alt="Audemars">
+                </div>
+                <h2 class="product-title">Audemars Piguet</h2>
+                <div class="price-and-cart">
+                    <span class="price">$23000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- IMAGE -->
+    <section class="image-bg">
+        <div class="overlay-content">
+            <h2>Luxury Redefined</h2>
+            <p>Explore Timeless Elegance</p>
+        </div>
+    </section>
+
+    <!-- SALE DICOUNT -->
+    <section class="sale-section" id="sale">
+        <div class="sale-content">
+            <h2>Exclusive Offer</h2>
+            <p>Get up to <span>30% OFF</span> on selected watches!</p>
+            <div class="countdown-timer" id="countdown">
+                <div><span id="days">00</span><small>Days</small></div>
+                <div><span id="hours">00</span><small>Hours</small></div>
+                <div><span id="minutes">00</span><small>Minutes</small></div>
+                <div><span id="seconds">00</span><small>Seconds</small></div>
+            </div>
+
+            <a href="#shop" class="shop-sale-btn">Shop Now</a>
+        </div>
+        <div class="sale-image">
+            <img src="images/Pagani.jpg" alt="Sale Watch">
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section__title">What Our Customers Say</h2>
+
+
+
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <img src="images/testimonial1.jpg" alt="Customer 1">
+                <h3>James Parker</h3>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                </div>
+                <p>"Absolutely love the watch I bought! Great quality and fast delivery."</p>
+            </div>
+
+
+
+            <div class="testimonial-card">
+                <img src="images/testmon-2.jpg" alt="Customer 2">
+                <h3>Linda Cruz</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>"The women's collection is stunning. I’ll definitely shop here again."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/testmon-1.jpg" alt="Customer 3">
+                <h3>Samuel Lee</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bx-star'></i>
+                </div>
+                <p>"Stylish and durable. Got one for my son too — he loves it!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/testmon-3.jpg" alt="Customer 4">
+                <h3>Sara Kim</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bx-star'></i>
+                </div>
+                <p>"The kids’ collection is just adorable. My son loves his new sporty watch!"</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQS -->
+    <section class="faqs" id="faqs">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">What is the return policy?</button>
+                <div class="faq-answer">
+                    <p>You can return any product within 30 days of purchase in its original condition for a full
+                        refund.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you offer international shipping?</button>
+                <div class="faq-answer">
+                    <p>Yes, we ship worldwide. Shipping costs and delivery time vary by location.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are your watches water-resistant?</button>
+                <div class="faq-answer">
+                    <p>Most of our watches are water-resistant up to 50 meters. Please check the product description for
+                        specifics.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I track my order?</button>
+                <div class="faq-answer">
+                    <p>Yes, once your order is shipped, we’ll send you a tracking number via email.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+        <div class="newsletter-wrapper">
+            <div class="newsletter-content">
+                <h2>Join Our Newsletter</h2>
+                <p>Subscribe to get the latest news, updates, and exclusive deals. Don't miss out on your discounts.
+                    Subscribe to our email
+                    newsletter to get the best offers, discounts, coupons,
+                    gifts and much more. </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class='bx bx-time'></i>
+                <span>TimelyLux</span>
+                <p>Timeless elegance for every wrist.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: support@timelylux.com</p>
+                <p>Phone: +1 555-987-6543</p>
+                <p>123 Prestige Avenue, NY, USA</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TimelyLux. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class='bx bx-chevron-up'></i>
+    </a>
+
+
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
